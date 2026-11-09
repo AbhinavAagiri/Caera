@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-server/
+.wrangler/
+.tmp/
+.env
+.env.local
+server/.data/
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.DS_Store

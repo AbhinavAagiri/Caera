@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-density="comfortable" data-motion="full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#050609" />
+    <meta
+      name="description"
+      content="CAERA is a local-first personal AI operating environment. Conversations, memory and tool activity stay on your machine."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>CAERA</title>
+    <script>
+      // Applies the saved appearance before first paint so the shell never flashes.
+      (function () {
+        try {
+          var raw = window.localStorage.getItem('caera.preferences.v1');
+          var prefs = raw ? JSON.parse(raw) : {};
+          var system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          var theme = prefs.theme === 'light' || prefs.theme === 'system' ? prefs.theme : 'dark';
+          var resolved = theme === 'system' ? system : theme;
+          document.documentElement.dataset.theme = resolved;
+          document.documentElement.dataset.density = prefs.density === 'compact' ? 'compact' : 'comfortable';
+          document.documentElement.dataset.motion = prefs.reduceMotion ? 'reduced' : 'full';
+          document.documentElement.style.colorScheme = resolved;
+        } catch (error) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

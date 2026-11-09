@@ -1,0 +1,26 @@
+{
+  "name": "caera",
+  "private": true,
+  "version": "0.1.0",
+  "description": "CAERA — a local-first personal AI operating environment for Windows 11.",
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently -n node,app -c cyan,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm run dev --workspace @caera/server",
+    "dev:client": "npm run dev --workspace @caera/client",
+    "build": "npm run build --workspace @caera/client && npm run build --workspace @caera/server",
+    "typecheck": "npm run typecheck --workspace @caera/shared && npm run typecheck --workspace @caera/server && npm run typecheck --workspace @caera/client",
+    "start": "npm run start --workspace @caera/server",
+    "db:migrate": "npm run db:migrate --workspace @caera/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

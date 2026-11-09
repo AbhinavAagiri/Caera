@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09080c" />
+    <meta
+      name="description"
+      content="CAERA is a local-first personal AI environment for Windows 11. Your conversations, memory and approved knowledge stay on your machine."
+    />
+    <meta property="og:title" content="CAERA — Personal intelligence, kept local" />
+    <meta
+      property="og:description"
+      content="A local-first AI environment with explicit memory, permissioned second-brain tools and a voice channel you host yourself."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/caera-core.png" />
+    <title>CAERA — Personal intelligence, kept local</title>
+    <link rel="stylesheet" href="site.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2309080c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23ff6a9e' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23f4efe6'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="CAERA home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="10.5"></circle>
+          <circle cx="16" cy="16" r="5.5"></circle>
+          <circle class="brand-dot" cx="16" cy="16" r="1.6"></circle>
+        </svg>
+        <span>CAERA</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#interface">Interface</a>
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#download">Install</a>
+      </nav>
+      <a class="ghost-button github-link" href="https://github.com/AbhinavAagiri" rel="noreferrer">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+        <div class="eyebrow reveal">
+          <span class="signal"></span>
+          Local-first personal intelligence
+          <span class="eyebrow-sep">/</span>
+          Windows 11
+        </div>
+        <h1 class="reveal">A second brain<br />that <em>stays yours.</em></h1>
+        <p class="hero-lede reveal">
+          CAERA is a quiet command deck for thought, memory and controlled action.
+          Conversations live in local SQLite. Approved knowledge stays on your disk.
+          Your model key belongs to you.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="primary-button" href="#interface">See the interface <span>↓</span></a>
+          <a class="text-link" href="#download">Read installation notes <span>↗</span></a>
+        </div>
+        <p class="preview-note reveal">
+          <strong>Static showcase.</strong> This page does not run CAERA or answer prompts.
+          Screens use sample data from the real interface.
+        </p>
+
+        <div class="hero-stage reveal">
+          <div class="stage-bar">
+            <span class="stage-context"><i></i> Command deck / local node online</span>
+            <span class="stage-meta">01 — Actual interface capture</span>
+          </div>
+          <a class="stage-image" href="assets/caera-core.png" target="_blank" rel="noreferrer">
+            <img
+              src="assets/caera-core.png"
+              alt="CAERA command deck showing the local node online, memory counts and the Awaiting command field."
+              width="1440"
+              height="960"
+            />
+            <span class="stage-open">Open full capture ↗</span>
+          </a>
+          <div class="stage-caption">
+            <span>Not a chat wrapper.</span>
+            <span>A local system with visible state, boundaries and real evidence.</span>
+          </div>
+        </div>
+
+        <div class="hero-metrics reveal">
+          <div><strong>0</strong><span>hosted accounts</span></div>
+          <div><strong>SQLite</strong><span>local source of truth</span></div>
+          <div><strong>BYOK</strong><span>your provider keys</span></div>
+          <div><strong>Loopback</strong><span>only</span></div>
+        </div>
+      </section>
+
+      <section class="manifesto" aria-labelledby="manifesto-title">
+        <p class="section-index reveal">01 / Premise</p>
+        <div class="manifesto-grid">
+          <h2 id="manifesto-title" class="reveal">Intelligence should not require <em>surrendering the archive.</em></h2>
+          <div class="manifesto-copy reveal">
+            <p>
+              Most assistants begin by asking for everything: your mail, your notes, your
+              calendar, your identity. CAERA begins with a boundary.
+            </p>
+            <p>
+              Storage is local. Integrations are explicit. Memory is written only after you
+              approve it. Every tool is named, permissioned, bounded and recorded. When the
+              machine does not have a capability, the interface says so.
+            </p>
+          </div>
+        </div>
+        <blockquote class="pull-quote reveal">
+          “A personal system should feel like infrastructure you own — not a service that
+          tolerates you.”
+          <cite>CAERA design principle</cite>
+        </blockquote>
+      </section>
+
+      <section class="interface-section" id="interface" aria-labelledby="interface-title">
+        <div class="section-head reveal">
+          <p class="section-index">02 / Interface</p>
+          <div>
+            <h2 id="interface-title">Built to be inhabited.</h2>
+            <p>
+              An instrument, a workbench and a record of what actually happened. These are
+              captures of the application running against an isolated demonstration database.
+            </p>
+          </div>
+        </div>
+
+        <div class="capture-grid">
+          <figure class="capture capture-wide reveal">
+            <a href="assets/caera-memory.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/caera-memory.png"
+                alt="CAERA Memory page with three approved entries and local retrieval controls."
+                width="1440"
+                height="960"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>
+              <span>02.1 — Memory</span>
+              <p>Nothing is captured automatically. Every entry exists because you approved it.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="capture reveal">
+            <a href="assets/caera-knowledge.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/caera-knowledge.png"
+                alt="CAERA Knowledge page with two indexed Obsidian documents and local FTS search."
+                width="1440"
+                height="960"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>
+              <span>02.2 — Knowledge</span>
+              <p>One local index over approved content, with source-level control.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="capture reveal">
+            <a href="assets/caera-connections.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/caera-connections.png"
+                alt="CAERA Connections page showing a read-only Obsidian vault connection and independent permissions."
+                width="1440"
+                height="960"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>
+              <span>02.3 — Connections</span>
+              <p>Read-only by default. Write access is independent, explicit and confirmed.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="capture capture-wide reveal">
+            <a href="assets/caera-agent.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/caera-agent.png"
+                alt="CAERA Agent page with a closed tool registry, run limits and approval guardrails."
+                width="1440"
+                height="960"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>
+              <span>02.4 — Agent</span>
+              <p>A closed tool registry, exact-action approval and no arbitrary command surface.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="section-head reveal">
+          <p class="section-index">03 / Capabilities</p>
+          <div>
+            <h2 id="features-title">Depth without theatre.</h2>
+            <p>
+              Each capability below exists in the source preview. Unverified connections are
+              labelled as such; there is no simulated success state.
+            </p>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature feature-large reveal">
+            <span class="feature-number">01</span>
+            <h3>Conversations that survive the browser.</h3>
+            <p>
+              Streaming replies from five provider adapters, local routing, markdown, code,
+              stop-and-keep-partial-text, local history and a persistent SQLite store.
+            </p>
+            <div class="feature-line"><span>SQLite</span><span>SSE stream</span><span>local node</span></div>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-number">02</span>
+            <h3>Memory with consent.</h3>
+            <p>Facts, preferences and project context you explicitly save. Only relevant entries reach the selected provider.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-number">03</span>
+            <h3>Second-brain retrieval.</h3>
+            <p>Permissioned Obsidian, Notion, Logseq and Anytype adapters feed an opt-in FTS5 index.</p>
+          </article>
+          <article class="feature feature-accent reveal">
+            <span class="feature-number">04</span>
+            <h3>A voice channel you host.</h3>
+            <p>
+              Push-to-talk and spoken replies through a separate VoiceStudio install on
+              loopback. No hosted speech dependency, no bundled model weights.
+            </p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-number">05</span>
+            <h3>Actions with a paper trail.</h3>
+            <p>Bounded plans, registered tools, live permission checks and exact-action approvals.</p>
+          </article>
+          <article class="feature feature-large reveal">
+            <span class="feature-number">06</span>
+            <h3>Honest failure is a feature.</h3>
+            <p>
+              No key? The interface says so. VoiceStudio absent? The text channel remains.
+              A tool fails? It is recorded as failed. The agent may not invent a citation,
+              a completed action or a found document.
+            </p>
+            <div class="feature-line"><span>real errors</span><span>no fabricated activity</span><span>local logs</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="integrations" aria-labelledby="integrations-title">
+        <div class="section-head reveal">
+          <p class="section-index">04 / Second brain</p>
+          <div>
+            <h2 id="integrations-title">One index. Separate permissions.</h2>
+            <p>
+              Content enters only through an explicitly connected adapter. Each app keeps its
+              own grants, status and exclusion rules.
+            </p>
+          </div>
+        </div>
+        <div class="integration-board reveal">
+          <div class="integration-item">
+            <span class="integration-status live">Verified locally</span>
+            <h3>Obsidian</h3>
+            <p>Vault-scoped Markdown access, folder exclusions, search, read and confirmed writes.</p>
+            <span class="integration-meta">Local path · no account</span>
+          </div>
+          <div class="integration-item">
+            <span class="integration-status pending">Live test pending</span>
+            <h3>Notion</h3>
+            <p>Official API with a user-created internal integration token and shared-page scope.</p>
+            <span class="integration-meta">HTTPS · explicit sharing</span>
+          </div>
+          <div class="integration-item">
+            <span class="integration-status pending">Live test pending</span>
+            <h3>Logseq</h3>
+            <p>Desktop HTTP API over loopback, with graph checks and independent grants.</p>
+            <span class="integration-meta">Loopback · developer API</span>
+          </div>
+          <div class="integration-item">
+            <span class="integration-status pending">Live test pending</span>
+            <h3>Anytype</h3>
+            <p>Local API key and optional space selection, with Markdown reads and typed properties.</p>
+            <span class="integration-meta">Loopback · local API</span>
+          </div>
+        </div>
+        <p class="fine-print reveal">
+          Notion, Logseq and Anytype adapters are implemented against their documented contracts.
+          This release environment has no live accounts or running instances, so no connection
+          success is claimed for them.
+        </p>
+      </section>
+
+      <section class="architecture" id="architecture" aria-labelledby="architecture-title">
+        <div class="architecture-copy">
+          <p class="section-index reveal">05 / Architecture</p>
+          <h2 id="architecture-title" class="reveal">Local by construction,<br /><em>not by promise.</em></h2>
+          <p class="reveal">
+            The browser talks to a loopback-only Express node. The node owns SQLite, provider
+            keys, filesystem boundaries and every tool execution. There is no hosted account,
+            telemetry pipeline or cloud database to switch off.
+          </p>
+          <ul class="privacy-list reveal">
+            <li><span>01</span> Browser UI never receives model-provider or integration keys.</li>
+            <li><span>02</span> No shell, arbitrary code or general filesystem endpoint.</li>
+            <li><span>03</span> Foreign origins and non-loopback hosts are rejected.</li>
+            <li><span>04</span> Memory and index controls can be cleared locally.</li>
+          </ul>
+        </div>
+        <div class="topology reveal" aria-label="CAERA local architecture diagram">
+          <div class="node-card browser">
+            <span class="node-kicker">01 / interface</span>
+            <strong>React + Vite</strong>
+            <small>127.0.0.1:5173</small>
+          </div>
+          <div class="link"><span>typed fetch + SSE</span></div>
+          <div class="node-card local">
+            <span class="node-kicker">02 / local node</span>
+            <strong>Express + SQLite</strong>
+            <small>127.0.0.1:5174</small>
+            <i></i>
+          </div>
+          <div class="branch">
+            <div class="branch-line"></div>
+            <div class="branch-item"><span>AI providers</span><small>one routed pick · your keys</small></div>
+            <div class="branch-item"><span>VoiceStudio</span><small>loopback · optional</small></div>
+            <div class="branch-item"><span>Second brains</span><small>explicit grants</small></div>
+          </div>
+          <div class="local-note">the only durable store is <code>caera.db</code></div>
+        </div>
+      </section>
+
+      <section class="privacy" aria-labelledby="privacy-title">
+        <div class="privacy-statement reveal">
+          <p class="section-index">06 / Privacy</p>
+          <h2 id="privacy-title">Your data is not the product.<br />There is no product to feed.</h2>
+        </div>
+        <div class="privacy-columns">
+          <div class="reveal">
+            <h3>Stays local</h3>
+            <ul class="check-list">
+              <li>Conversations and messages</li>
+              <li>Approved memory and source excerpts</li>
+              <li>Connector configuration and grants</li>
+              <li>Knowledge index and sync state</li>
+              <li>Tool audit records and agent runs</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3>Leaves only when you ask</h3>
+            <ul class="arrow-list">
+              <li>Prompt and bounded context to the routed provider</li>
+              <li>Selected memory entries to that provider</li>
+              <li>Explicit connector requests to the provider you configured</li>
+              <li>Audio to your loopback VoiceStudio instance</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3>Never included</h3>
+            <ul class="cross-list">
+              <li>Analytics or telemetry</li>
+              <li>Hosted account identity</li>
+              <li>Bundled third-party weights</li>
+              <li>API keys in browser storage</li>
+              <li>A promise that no model provider sees your data</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="download" id="download" aria-labelledby="download-title">
+        <div class="download-copy">
+          <p class="section-index reveal">07 / Get started</p>
+          <h2 id="download-title" class="reveal">A source preview,<br /><em>not a shrink-wrapped app.</em></h2>
+          <p class="reveal">
+            CAERA is not yet distributed as an installer. The current release runs from source
+            with Node.js 22.13+ and at least one provider key or local Ollama runtime. Tauri and Electron remain an evaluated
+            packaging decision, not a shipped claim.
+          </p>
+          <div class="release-flags reveal">
+            <span class="flag warn">No installer yet</span>
+            <span class="flag">Windows 11 tested build</span>
+            <span class="flag">VoiceStudio separate</span>
+          </div>
+          <a class="primary-button" href="https://github.com/AbhinavAagiri" rel="noreferrer">
+            GitHub profile <span>↗</span>
+          </a>
+          <p class="fine-print">
+            Repository publication is pending. The link above is the author profile; this page
+            does not invent a repository URL. Update it before publishing.
+          </p>
+        </div>
+        <div class="install-card reveal">
+          <div class="terminal-head">
+            <span><i></i><i></i><i></i></span>
+            <span>PowerShell / install from source</span>
+          </div>
+          <pre><code><span class="dim"># 1 — get the repository</span>
+git clone &lt;repository-url&gt; caera
+cd caera
+
+<span class="dim"># 2 — install and configure</span>
+npm install
+copy .env.example server\.env
+notepad server\.env  <span class="dim"># add a provider API key</span>
+
+<span class="dim"># 3 — build and run</span>
+npm run build
+npm start</code></pre>
+          <div class="terminal-foot">
+            <span>→ http://127.0.0.1:5174</span>
+            <span>Node 22.13+</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="limitations" aria-labelledby="limitations-title">
+        <div class="limitations-head reveal">
+          <p class="section-index">08 / Release truth</p>
+          <h2 id="limitations-title">What this preview does not claim.</h2>
+        </div>
+        <div class="limitation-grid">
+          <div class="limitation reveal"><span>01</span><p>No clean-Windows installation test has been completed on a separate machine.</p></div>
+          <div class="limitation reveal"><span>02</span><p>Live Notion, Logseq and Anytype connection success remains unverified.</p></div>
+          <div class="limitation reveal"><span>03</span><p>Voice chat requires a separately installed, configured VoiceStudio instance.</p></div>
+          <div class="limitation reveal"><span>04</span><p>No desktop installer is published; no demo video is represented as live usage.</p></div>
+          <div class="limitation reveal"><span>05</span><p>The project license is an owner decision that must be resolved before public release.</p></div>
+          <div class="limitation reveal"><span>06</span><p>VoiceStudio is AGPL-3.0 and its models carry separate terms. None are redistributed here.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand">CAERA</span>
+        <p>Personal intelligence, kept local.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#interface">Interface</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#download">Install</a>
+        <a href="https://github.com/AbhinavAagiri" rel="noreferrer">GitHub ↗</a>
+      </div>
+      <p class="footer-note">
+        Static portfolio showcase · No analytics · Sample interface data · No hosted assistant
+      </p>
+    </footer>
+    <script src="site.js"></script>
+  </body>
+</html>
